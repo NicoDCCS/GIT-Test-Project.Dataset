@@ -1,0 +1,155 @@
+table Tabelle1
+	lineageTag: f86d6f33-86e2-4910-bceb-9055057e3709
+
+	column Column1
+		dataType: string
+		lineageTag: 0c6169ea-129f-4d64-bb50-7fad439a4683
+		summarizeBy: none
+		sourceColumn: Column1
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column2
+		dataType: string
+		lineageTag: 8545ea69-4c43-4d02-84be-d753f4753a17
+		summarizeBy: none
+		sourceColumn: Column2
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column3
+		dataType: string
+		lineageTag: 860bf9f3-0f59-4707-96e8-00c849daac24
+		summarizeBy: none
+		sourceColumn: Column3
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column4
+		dataType: string
+		lineageTag: 50ee8e7c-e490-46c5-8152-7d3dfbeec403
+		summarizeBy: none
+		sourceColumn: Column4
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column5
+		dataType: double
+		lineageTag: 873753d6-129c-4b77-979e-570f9bda532e
+		summarizeBy: sum
+		sourceColumn: Column5
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Column6
+		dataType: string
+		lineageTag: 2ae279c9-4c70-46ed-936f-c2608769c11a
+		summarizeBy: none
+		sourceColumn: Column6
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column7
+		dataType: string
+		lineageTag: 01874c20-7f52-4d00-800d-363afe53a6c0
+		summarizeBy: none
+		sourceColumn: Column7
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column8
+		dataType: string
+		lineageTag: 86b59fa8-d86b-44d4-97ba-2bc1dbef9435
+		summarizeBy: none
+		sourceColumn: Column8
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column9
+		dataType: string
+		lineageTag: e6a00ad0-0fab-47ab-954a-ab4e9cff7ff5
+		summarizeBy: none
+		sourceColumn: Column9
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column10
+		dataType: string
+		lineageTag: 31c8b74b-69fe-485e-9dd6-eddc00d878a3
+		summarizeBy: none
+		sourceColumn: Column10
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column11
+		dataType: string
+		lineageTag: 7558036c-4160-4713-b626-b7865973d557
+		summarizeBy: none
+		sourceColumn: Column11
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column12
+		dataType: string
+		lineageTag: b197766b-982a-4696-8187-d8c68d07e531
+		summarizeBy: none
+		sourceColumn: Column12
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column13
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 3a354f9a-e598-4a9b-94bc-ed42942d8ede
+		summarizeBy: none
+		sourceColumn: Column13
+
+		variation Variation
+			isDefault
+			relationship: 1988d4a2-cbb4-41c2-ada3-118d6d2c16da
+			defaultHierarchy: LocalDateTable_cdd5410e-ff8b-4e41-bf93-1c8b1f894bfe.Datumshierarchie
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Column14
+		dataType: int64
+		formatString: 0
+		lineageTag: 8a1e8e68-006c-4582-acb3-df141b73aa8c
+		summarizeBy: sum
+		sourceColumn: Column14
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column15
+		dataType: string
+		lineageTag: 6f8dd6a4-00cd-425c-aa14-93bf1ff8d513
+		summarizeBy: none
+		sourceColumn: Column15
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column16
+		dataType: int64
+		formatString: 0
+		lineageTag: e91c5a4d-4b28-4bb7-a360-0b7167a41e80
+		summarizeBy: sum
+		sourceColumn: Column16
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Tabelle1 = m
+		mode: import
+		source =
+				let
+				    Quelle = Excel.Workbook(File.Contents("C:\Users\nplattner\Documents\dummy data.xlsx"), null, true),
+				    Tabelle1_Sheet = Quelle{[Item="Tabelle1",Kind="Sheet"]}[Data],
+				    #"Geänderter Typ" = Table.TransformColumnTypes(Tabelle1_Sheet,{{"Column1", type text}, {"Column2", type text}, {"Column3", type text}, {"Column4", type text}, {"Column5", type number}, {"Column6", type text}, {"Column7", type text}, {"Column8", type text}, {"Column9", type text}, {"Column10", type text}, {"Column11", type text}, {"Column12", type text}, {"Column13", type date}, {"Column14", Int64.Type}, {"Column15", type text}, {"Column16", Int64.Type}})
+				in
+				    #"Geänderter Typ"
+
+	annotation PBI_ResultType = Table
+
