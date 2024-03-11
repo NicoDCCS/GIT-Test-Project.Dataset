@@ -101,7 +101,7 @@ table 'Test Table'
 
 	column Column13
 		dataType: dateTime
-		formatString: Long Date
+		formatString: Short Date
 		lineageTag: 3a354f9a-e598-4a9b-94bc-ed42942d8ede
 		summarizeBy: none
 		sourceColumn: Column13

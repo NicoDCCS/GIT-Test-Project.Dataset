@@ -14,9 +14,10 @@
             "y": 0
           },
           "nodeIndex": "Test Table",
+          "nodeLineageTag": "f86d6f33-86e2-4910-bceb-9055057e3709",
           "size": {
-            "height": 300,
-            "width": 234
+            "height": 472,
+            "width": 175
           },
           "zIndex": 0
         }
