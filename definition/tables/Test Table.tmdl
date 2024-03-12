@@ -145,7 +145,7 @@ table 'Test Table'
 		mode: import
 		source =
 				let
-				    Quelle = Excel.Workbook(File.Contents("C:\Users\nplattner\Documents\dummy data.xlsx"), null, true),
+				    Quelle = Excel.Workbook(File.Contents("C:\Users\nplattner\Documents\dummy data.xlsx"), null, false),
 				    Tabelle1_Sheet = Quelle{[Item="Tabelle1",Kind="Sheet"]}[Data],
 				    #"Geänderter Typ" = Table.TransformColumnTypes(Tabelle1_Sheet,{{"Column1", type text}, {"Column2", type text}, {"Column3", type text}, {"Column4", type text}, {"Column5", type number}, {"Column6", type text}, {"Column7", type text}, {"Column8", type text}, {"Column9", type text}, {"Column10", type text}, {"Column11", type text}, {"Column12", type text}, {"Column13", type date}, {"Column14", Int64.Type}, {"Column15", type text}, {"Column16", Int64.Type}}),
 				    #"Entfernte Spalten" = Table.RemoveColumns(#"Geänderter Typ",{"Column16"})
