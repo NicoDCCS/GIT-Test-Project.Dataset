@@ -117,7 +117,7 @@ table 'Test Table'
 
 	column Column14
 		dataType: int64
-		formatString: 0\ %;-0\ %;0\ %
+		formatString: #,0\ %;-#,0\ %;#,0\ %
 		lineageTag: 8a1e8e68-006c-4582-acb3-df141b73aa8c
 		summarizeBy: sum
 		sourceColumn: Column14
@@ -134,7 +134,7 @@ table 'Test Table'
 
 	column Year = Year('Test Table'[Column13])
 		dataType: int64
-		formatString: 0
+		formatString: #,0
 		lineageTag: f636208d-c3b9-4a30-a8e0-944535ee9d8d
 		summarizeBy: sum
 		isDataTypeInferred
