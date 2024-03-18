@@ -3,24 +3,3 @@ relationship 1988d4a2-cbb4-41c2-ada3-118d6d2c16da
 	fromColumn: 'Test Table'.Column13
 	toColumn: LocalDateTable_cdd5410e-ff8b-4e41-bf93-1c8b1f894bfe.Date
 
-relationship be7315f1-5ac9-4257-8ef5-9996d7c542dc
-	joinOnDateBehavior: datePartOnly
-	fromColumn: Sheet1.Stichtag
-	toColumn: LocalDateTable_59d7a934-1770-4e42-8be8-e9057fb5d26a.Date
-
-relationship dcc09e33-5599-4c71-9b16-b0cde8a11e68
-	joinOnDateBehavior: datePartOnly
-	fromColumn: Sheet1.'LFZ Beginn'
-	toColumn: LocalDateTable_19c922ca-54b2-41c4-9ecc-1d51a046b52a.Date
-
-relationship 5437da89-66dd-43e9-aa83-468d2af717b1
-	joinOnDateBehavior: datePartOnly
-	fromColumn: Sheet1.'LFZ Ende'
-	toColumn: LocalDateTable_3895ef99-9a0f-40e0-82b4-68f8458e2e28.Date
-
-relationship 925c4766-dab0-4908-8c64-baa53f9c0837
-	crossFilteringBehavior: bothDirections
-	toCardinality: many
-	fromColumn: 'Test Table'.Column14
-	toColumn: Sheet1.Zinssatz
-
