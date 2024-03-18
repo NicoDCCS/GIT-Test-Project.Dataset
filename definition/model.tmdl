@@ -10,11 +10,15 @@ annotation PBI_ProTooling = ["DevMode"]
 
 annotation PBIDesktopVersion = 2.126.1261.0 (24.02)
 
-annotation PBI_QueryOrder = ["Test Table"]
+annotation PBI_QueryOrder = ["Test Table","Sheet1"]
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
 ref table 'Test Table'
 ref table DateTableTemplate_57e18208-c799-49e6-b95f-b09ad580fab8
 ref table LocalDateTable_cdd5410e-ff8b-4e41-bf93-1c8b1f894bfe
+ref table Sheet1
+ref table LocalDateTable_59d7a934-1770-4e42-8be8-e9057fb5d26a
+ref table LocalDateTable_19c922ca-54b2-41c4-9ecc-1d51a046b52a
+ref table LocalDateTable_3895ef99-9a0f-40e0-82b4-68f8458e2e28
 

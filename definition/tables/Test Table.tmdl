@@ -119,7 +119,7 @@ table 'Test Table'
 		dataType: int64
 		formatString: 0
 		lineageTag: 8a1e8e68-006c-4582-acb3-df141b73aa8c
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: Column14
 
 		annotation SummarizationSetBy = Automatic
